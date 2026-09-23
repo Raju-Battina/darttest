@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "C:\\Users\\coreh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/darttest/WeatherImportApp.csproj",
+      "projectUniqueName": "C:\\Code\\darttest\\batch\\WeatherImportApp.csproj",
       "projectName": "WeatherImportApp",
-      "projectPath": "/workspaces/darttest/WeatherImportApp.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/darttest/obj/",
+      "projectPath": "C:\\Code\\darttest\\batch\\WeatherImportApp.csproj",
+      "packagesPath": "C:\\Users\\coreh\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\darttest\\batch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\coreh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
