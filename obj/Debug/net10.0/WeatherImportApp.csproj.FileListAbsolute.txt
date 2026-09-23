@@ -1,0 +1,16 @@
+/workspaces/darttest/bin/Debug/net10.0/WeatherImportApp
+/workspaces/darttest/bin/Debug/net10.0/WeatherImportApp.deps.json
+/workspaces/darttest/bin/Debug/net10.0/WeatherImportApp.runtimeconfig.json
+/workspaces/darttest/bin/Debug/net10.0/WeatherImportApp.dll
+/workspaces/darttest/bin/Debug/net10.0/WeatherImportApp.pdb
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.AssemblyInfoInputs.cache
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.AssemblyInfo.cs
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.csproj.CoreCompileInputs.cache
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.sourcelink.json
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.dll
+/workspaces/darttest/obj/Debug/net10.0/refint/WeatherImportApp.dll
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.pdb
+/workspaces/darttest/obj/Debug/net10.0/WeatherImportApp.genruntimeconfig.cache
+/workspaces/darttest/obj/Debug/net10.0/ref/WeatherImportApp.dll
+/workspaces/darttest/bin/Debug/net10.0/appsettings.json
