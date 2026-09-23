@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Weather data";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4">Weather data</h1>
+    <p class="lead">Forecast from the configured weather API</p>
+</div>
+
+<div id="weatherError" class="alert alert-danger d-none" role="alert">
+    Failed to load weather data. Please try again later.
+</div>
+
+<div class="table-responsive">
+    <table id="weatherTable" class="table table-striped table-hover align-middle w-100">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Min temp</th>
+                <th scope="col">Max temp</th>
+                <th scope="col">Precipitation</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(function () {
+            $.fn.dataTable.ext.errMode = 'none';
+
+            $('#weatherTable').DataTable({
+                ajax: {
+                    url: '@Url.Action("Weather", "Home")',
+                    dataSrc: '',
+                    error: function () {
+                        $('#weatherError').removeClass('d-none');
+                    }
+                },
+                columns: [
+                    {
+                        data: 'dateOn',
+                        render: function (data) {
+                            return new Date(data + 'T00:00:00').toLocaleDateString(undefined, {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric'
+                            });
+                        }
+                    },
+                    {
+                        data: 'temperature_2m_min',
+                        render: $.fn.dataTable.render.number(',', '.', 1)
+                    },
+                    {
+                        data: 'temperature_2m_max',
+                        render: $.fn.dataTable.render.number(',', '.', 1)
+                    },
+                    {
+                        data: 'precipitation_sum',
+                        render: $.fn.dataTable.render.number(',', '.', 1)
+                    }
+                ],
+                language: {
+                    emptyTable: 'No weather data available'
+                }
+            });
+
+            $('#weatherTable').on('xhr.dt', function (event, settings, json, xhr) {
+                if (xhr && xhr.status >= 200 && xhr.status < 300) {
+                    $('#weatherError').addClass('d-none');
+                }
+            });
+        });
+    </script>
+}

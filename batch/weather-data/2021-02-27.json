@@ -4,5 +4,8 @@
   ,
   "temperature_2m_min": 
     -11.1
+  ,
+  "precipitation_sum": 
+    0.00
   
 }

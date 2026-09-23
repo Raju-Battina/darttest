@@ -38,7 +38,8 @@ foreach (var dt in dates.Where(d => !string.IsNullOrWhiteSpace(d)).Select(d => d
             if (JsonNode.Parse(responseBody) is not JsonObject responseJson ||
                 responseJson["daily"] is not JsonObject daily ||
                 daily["temperature_2m_max"] is not JsonNode temperatureMax ||
-                daily["temperature_2m_min"] is not JsonNode temperatureMin)
+                daily["temperature_2m_min"] is not JsonNode temperatureMin ||
+                daily["precipitation_sum"] is not JsonNode precipitationSum)
             {
                 throw new JsonException("The response does not contain daily temperature values.");
             }
@@ -46,7 +47,8 @@ foreach (var dt in dates.Where(d => !string.IsNullOrWhiteSpace(d)).Select(d => d
             var temperatures = new JsonObject
             {
                 ["temperature_2m_max"] = temperatureMax.DeepClone(),
-                ["temperature_2m_min"] = temperatureMin.DeepClone()
+                ["temperature_2m_min"] = temperatureMin.DeepClone(),
+                ["precipitation_sum"] = precipitationSum.DeepClone()
             };
 
             var responseFile = Path.Combine(settings.JsonFolder, $"{dateParm}.json");
